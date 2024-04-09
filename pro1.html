@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="pro1.css">
+</head>
+<body>
+    <div class="menu">
+    <div class="imgbx">
+        <img src="parotta.jpg">
+    </div>
+    <div class="details">
+        <h3>Parotta</h3>
+        <p>
+             <!-- <details> -->
+                <h2>Breaking Bread?</h2>
+                <p>Rolling into the day with some parotta goodness. Who’s joining?</p>
+            <!-- </details>mnbvc -->
+            <center>
+            <button onclick="reduce(this)" >-</button>
+            <div class="incr">0</div>
+            <button onclick="add(this)" >+</button><br>
+            <button type="button" style="background-color:bisque;" onclick="alert('Your order has been booked')">Order</button>
+            
+        </center>
+        
+    </div>
+    </div>
+    <div class="menu">
+    <div class="imgbx">
+        <img src="dosa.webp">
+    </div>
+    <div class="details">
+        <h3>Dossa</h3>
+        <p>
+             <!-- <details> -->
+                <h2>BreakFast<h2>
+                <p>A dosa brings the yum to your tum</p>
+            <!-- </details>mnbvc -->
+            <center>
+            <button onclick="reduce(this)" >-</button>
+            <div class="incr">0</div>
+            <button onclick= add(this) >+</button><br>
+            <button type="button" style="background-color:bisque;" onclick="alert('Your order has been booked')">Order</button>
+            
+        </center>
+        
+    </div>
+    </div>
+            <script>
+                var count=document.getElementsByClassName("incr");
+                
+                function add(e){
+                    let countElement = e.previousElementSibling
+                    countElement.innerHTML = Number(countElement.innerHTML) + 1;
+                }
+                function reduce(e){
+                    let countElement = e.nextElementSibling
+                    if(Number(countElement.innerHTML) <= 0)
+                    return
+                    countElement.innerHTML = Number(countElement.innerHTML) - 1;
+                    // count.innerHTML -=1;
+                }
+            </script>
+
+</body>
+</html>
